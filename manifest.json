@@ -1,0 +1,61 @@
+{
+  "name": "KOLOM ILMU",
+  "short_name": "KOLOM ILMU",
+  "display": "standalone",
+  "prefer_related_applications": false,
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fff",
+  "theme_color": "#072346",
+  "description": "KOLOM ILMU adalah Media Blog yang membahas pendidikan, pendidikan karakter, seputar Islam, tutorial, blogger, dan adsense",
+  "icons": [
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": "0.75",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "density": "1.0",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/apple-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn.azid45.web.id/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "density": "4.0",
+      "purpose": "any maskable"
+    }
+  ]
+}
