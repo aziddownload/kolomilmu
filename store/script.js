@@ -1,9 +1,3 @@
-// format km
-function round(value, precision) {
-  var multiplier = Math.pow(10, precision || 0);
-  return Math.round(value * multiplier) / multiplier;
-}
-
 // google maps general
 var geocoder = new google.maps.Geocoder();
 var directionsService = new google.maps.DirectionsService();
@@ -44,8 +38,7 @@ if (navigator.geolocation) {
             if (status == 'OK') {
               directionsDisplay.setDirections(result);
               console.log(result.routes[0]);
-              var resetKM = result.routes[0].legs[0].distance.value/1000;
-              var km = round(resetKM, 0);
+              var km= result.routes[0].legs[0].distance.text;
               console.log(km);
             } else {
               console.log("alamat gagal dimuat");
