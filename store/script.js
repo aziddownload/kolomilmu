@@ -5,6 +5,12 @@ var geocoder = new google.maps.Geocoder();
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 
+// Event List Menu
+$(".list-menu").click(function(){
+  $(".fixed-menu").toggleClass("active");
+  return false;
+});
+
 // Geo Lokasi
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -58,3 +64,4 @@ if (navigator.geolocation) {
   // lokasi awal tidak ditemukan
   console.log("Aktifkan Lokasi Anda");
 }
+
