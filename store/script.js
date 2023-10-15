@@ -1,3 +1,5 @@
+var linksheet = "https://script.google.com/macros/s/AKfycbzcKSmYqoSrG-MA8WkJablyuzKETip89fenhNOIXTr95936CjTmpOYEqZlmN_OGwx86/exec";
+
 // google maps general
 var geocoder = new google.maps.Geocoder();
 var directionsService = new google.maps.DirectionsService();
@@ -38,7 +40,7 @@ if (navigator.geolocation) {
             if (status == 'OK') {
               directionsDisplay.setDirections(result);
               console.log(result.routes[0]);
-              var km= result.routes[0].legs[0].distance.text;
+              var km = result.routes[0].legs[0].distance.text;
               console.log(km);
             } else {
               console.log("alamat gagal dimuat");
