@@ -41,7 +41,15 @@ if (navigator.geolocation) {
             travelMode: 'DRIVING'
           };
           directionsService.route(request, function (result, status) {
-            console.log(status);
+            if (status == 'OK') {
+              directionsDisplay.setDirections(result);
+              console.log(result.routes[0]);
+              var resetKM = result.routes[0].legs[0].distance.value/1000;
+              var km = round(resetKM, 0);
+              console.log(km);
+            } else {
+              console.log("alamat gagal dimuat");
+            }
           });
         } else {
           console.log("Alamat tidak ditemukan");
