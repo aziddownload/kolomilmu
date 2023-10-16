@@ -245,6 +245,71 @@ body {
     padding: 10px;
     padding-top: 20px;
 }
+.search-location {
+    position: relative;
+    background-color: #f4f4f4;
+    margin: 15px 0;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 15px;
+}
+.search-location .icon-map {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding-right: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.search-location .icon-map svg {
+    width: 24px;
+    height: 24px;
+    fill: #a41111;
+}
+.search-location .search-input {
+    position: relative;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: inherit;
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+.search-location .search-input input {
+    position: relative;
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    margin: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.search-location .button-searh {
+    position: relative;
+    background-color: #a41111;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
 .top-banner {
     position: relative;
     display: block;
