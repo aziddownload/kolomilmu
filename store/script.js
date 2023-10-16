@@ -11,6 +11,20 @@ $(".list-menu").click(function(){
   return false;
 });
 
+// mengambil Lat dan Lng
+function formatLatlng(alamat){
+  geocoder.geocode({ 'address': alamat }, function(results, status) {
+    if (status === 'OK' && results.length > 0) {
+      var location = results[0].geometry.location;
+      var lat = location.lat();
+      var lng = location.lng();
+      var latlng = new google.maps.LatLng(lat, lng);
+      return latlng;
+    } else {
+      return false;
+    }
+  });
+}
 // Geo Lokasi
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -37,6 +51,7 @@ if (navigator.geolocation) {
           var kab = kabupaten.split(" ")[1];
           console.log(kab);
           var alamattujuan = "Jl. Berbek Raya No. 26 Berbek Waru Sidoarjo";
+          console.log(formatLatLng(alamatujuan));
           var request = {
             origin: alamat,
             destination: alamattujuan,
