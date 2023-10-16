@@ -245,6 +245,20 @@ body {
     padding: 10px;
     padding-top: 20px;
 }
+.top-banner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+}
+.top-banner img {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
 
 
 
