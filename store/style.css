@@ -293,11 +293,12 @@ body {
     width: calc(100% - 20px);
     padding: 5px 10px;
     margin: 0;
+    font-size: 14px;
     background-color: transparent;
     outline: none;
     border: none;
 }
-.search-location .button-searh {
+.search-location .button-search {
     position: relative;
     background-color: #a41111;
     color: #ffffff;
