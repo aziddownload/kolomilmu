@@ -1,9 +1,9 @@
 /**
- * @name  Maskoding Decode
+ * @name  Decode Azid Blogger
  * @description  JavaScript Deobfuscator and Unpacker
- * @author  maskoding <abdiusu@gmail.com> (https://deobfuscator.maskoding.com)
+ * @author Azid Blogger
  * @version  1.6.2
- * @copyright  maskoding 2017
+ * @copyright  azidblogger
  * @license  MIT
  */
 
@@ -150,7 +150,7 @@
         externalPreview = function (source) {
             if (externalUrl) URL.revokeObjectURL(externalUrl);
 
-            source = '<html><head><meta charset="utf-8"><link rel="shortcut icon" type="image/png" href="https://deobfuscator.maskoding.com/favicon.png"><title>Maskoding Decode | Preview</title><style>' + externalStyle + '</style></head><body><pre class="hljs">' + source + '</pre></body></html>';
+            source = '<html><head><meta charset="utf-8"><link rel="shortcut icon" type="image/png" href="https://azid45.web.id/favicon.png"><title>Decode Azid Blogger | Preview</title><style>' + externalStyle + '</style></head><body><pre class="hljs">' + source + '</pre></body></html>';
 
             externalUrl = new Blob([source], {
                 type: 'text/html'
@@ -168,7 +168,7 @@
             if (temp === '') return;
 
             if (!workerFormat) {
-                workerFormat = new Worker('/assets/js/worker/format.js');
+                workerFormat = new Worker('/deofuscator/format.js');
                 workerFormat.addEventListener('message', function (e) {
                     view.innerHTML = e.data;
                     externalPreview(e.data);
@@ -222,7 +222,7 @@
             }
 
             if (!workerDecode) {
-                workerDecode = new Worker('/assets/js/worker/decode.js');
+                workerDecode = new Worker('/deofuscator/decode.js');
                 workerDecode.addEventListener('message', function (e) {
                     if (e.data !== temp) {
                         temp = e.data;
