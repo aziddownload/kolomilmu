@@ -58,7 +58,6 @@ if (buttonShortlink) {
     var nama = namaInput.value;
     var id = idInput.value;
     var shortlink = "https://azid45.web.id/" + id;
-
     if (url == "") {
       notification("Url Shorlink diperlukan");
       return false;
@@ -68,26 +67,35 @@ if (buttonShortlink) {
     } else if (id == "") {
       notification("Prefix Shorlink diperlukan");
       return false;
+    } else if (id.indexOf(" ") !== -1) {
+      notification("Prefix Tidak boleh mengandung spasi");
+      return false;
     } else {
-      notification(berhasil + "Silhkan ditunggu, data sedang diproses");
-      db.collection('datashortlink').add({
-        id: id,
-        nama: nama,
-        url: url,
-        shortlink: shortlink
-      }).then(function (res) {
-        notification(berhasil + "Shortlink Anda Berhasil dibuat " + shortlink);
-        var boxOutputLink = document.querySelector(".box-output-link");
-        if (boxOutputLink) {
-          boxOutputLink.style.display = "block";
-        }
-        var outputShortlink = document.getElementById("output-shortlink");
-        if (outputShortlink) {
-          outputShortlink.value = shortlink;
-        }
-      }).catch(function (e) {
-        notification(gagal + "Prefix sudah tersedia, silahkan ganti yang lain");
-        console.log(e);
+      notification("Silhkan ditunggu, data sedang diproses");
+      db.collection("datashortlink").where("id", "==", id).get().then((data) => {
+          var checkempty = data.empty;
+          if (checkempty == true) {
+              db.collection('datashortlink').add({
+                  id: id,
+                  nama: nama,
+                  url: url,
+                  shortlink: shortlink
+              }).then(function (res) {
+                  notification(berhasil + "Shortlink Anda Berhasil dibuat " + shortlink);
+                  var boxOutputLink = document.querySelector(".box-output-link");
+                  if (boxOutputLink) {
+                      boxOutputLink.style.display = "block";
+                  }
+                  var outputShortlink = document.getElementById("output-shortlink");
+                  if (outputShortlink) {
+                      outputShortlink.value = shortlink;
+                  }
+              }).catch(function (e) {
+                  notification(gagal + "Prefix sudah tersedia, silahkan ganti yang lain");
+              });
+          } else {
+              notification(gagal + "Prefix sudah tersedia, silahkan ganti yang lain");
+          }
       });
       return false;
     }
