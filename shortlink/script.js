@@ -46,7 +46,7 @@ $(".list-menu").click(function () {
 
 // Daftarkan Link
 $("#button-shortlink").click(function () {
-    var url = $("#urlshorlink");
+    var url = $("#urlshorlink").val();
     var nama = $("#namashortlink").val();
     var id = $("#prefixshortlink").val();
     var shortlink = "https://azid45.web.id/" + id;
