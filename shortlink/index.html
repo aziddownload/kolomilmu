@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="#ffffff" name="theme-color">
+    <meta content="#ffffff" name="msapplication-navbutton-color">
+    <meta content="Product Example" name="keywords">
+    <title>Simple Produk</title>
+    <link rel="stylesheet" href="/shortlink/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-utama">
+      <div class="header-content">
+        <div class="header-title">
+          <a href="/shortlink">
+            <img src="https://2.bp.blogspot.com/-QKs8MHEU9vE/XjZffq2ftJI/AAAAAAAAE5g/6trbaJMk93I7AlPoicyn3UIMZO4N0zMSACK4BGAYYCw/w300/logo-simple-produk.png" width="300" height="60" alt="Simple Produk"/>
+          </a>
+          <h1 class="title hapus">Simple Produk</h1>
+        </div>
+        <button class="button-menu list-menu">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 11H11V3H3M5 5H9V9H5M13 21H21V13H13M15 15H19V19H15M3 21H11V13H3M5 15H9V19H5M13 3V11H21V3M19 9H15V5H19Z" fill="currentColor"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- Penutup Header -->
+    <!-- Daftar Menu Button -->
+    <div class="fixed-menu">
+      <div class="button-close">
+        <button role="button" class="close list-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
+          </svg>
+        </button>
+      </div>
+      <div class="menu-wrapper">
+        <ul>
+          <li>
+            <a href="/shortlink">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7C14.1,7.7 15.8,9.4 15.8,11.5C15.8,14.5 12,18 12,18C12,18 8.2,14.5 8.2,11.5C8.2,9.4 9.9,7.7 12,7.7M12,10A1.5,1.5 0 0,0 10.5,11.5A1.5,1.5 0 0,0 12,13A1.5,1.5 0 0,0 13.5,11.5A1.5,1.5 0 0,0 12,10Z" />
+              </svg>
+              <span class="title">Home</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Penutup Daftar Menu Button -->
+
+    <!-- Wrapper -->
+    <main class="wrapper">
+      <section class="content-wrap">
+        <div class="content-box" id="content-daftar">
+          <div class="daftar-toko">
+            <div class="formdata">
+              <label for="urlshortlink"><span>Url Link</span></label>
+              <input id="urlshorlink" placeholder="https://domain.com/xxxxx" type="url"/>
+            </div>
+            <div class="formdata">
+              <label for="namashortlink"><span>Nama Shortlink</span></label>
+              <input id="namashortlink" placeholder="Nama Shortlink" type="text"/>
+            </div>
+            <div class="formdata">
+              <label for="prefixshortlink"><span>Nama Alias Link</span></label>
+              <div class="box-prefix">
+                <div class="prefix">https://azid45.web.id/</div>
+                <input id="prefixshortlink" placeholder="Contoh" type="number"/>
+              </div>
+            </div>
+            <button class="button-submit" id="button-shortlink">Upload Sekarang</button>
+            <div class="box-output-link">
+              <div class="search-location">
+                <div class="search-input">
+                  <input class="input-searh" id="output-shortlink" placeholder="Ketik Alamat Anda Disini" type="text"/>
+                </div>
+                <button class="button-search" id="copy-shortlink">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" fill="currentColor"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Penutup Wrapper -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD13_INFGd5GjoJa3HZHMCzF37h-ZQXatE&libraries=places"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="/shortlink/script.js"></script>
+  </body>
+</html>
