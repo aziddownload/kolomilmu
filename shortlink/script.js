@@ -49,7 +49,7 @@ $("#button-shortlink").click(function () {
     var url = $("#urlshorlink").val();
     var nama = $("#namashortlink").val();
     var id = $("#prefixshortlink").val();
-    var shortlink = "https://azid45.web.id/" + id;
+    var shortlink = "https://azid45.web.id/link/" + id;
     if (url == "") {
         notification("Url Shorlink diperlukan");
         return false;
