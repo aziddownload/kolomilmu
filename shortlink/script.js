@@ -60,7 +60,7 @@ $("#button-shortlink").click(function () {
         notification("Prefix Shorlink diperlukan");
         return false;
     } else {
-        db.collection('datatoko').add({
+        db.collection('datashortlink').add({
             id: id,
             nama: nama,
             url: url,
