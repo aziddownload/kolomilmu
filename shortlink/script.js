@@ -45,7 +45,7 @@ $(".list-menu").click(function () {
 });
 
 // Daftarkan Link
-$("#kirim-toko").click(function () {
+$("#button-shortlink").click(function () {
     var url = $("#urlshorlink");
     var nama = $("#namashortlink").val();
     var id = $("#prefixshortlink").val();
