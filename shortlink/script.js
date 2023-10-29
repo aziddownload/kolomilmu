@@ -69,6 +69,7 @@ if (buttonShortlink) {
       notification("Prefix Shorlink diperlukan");
       return false;
     } else {
+      notification(berhasil + "Silhkan ditunggu, data sedang diproses");
       db.collection('datashortlink').add({
         id: id,
         nama: nama,
@@ -90,6 +91,18 @@ if (buttonShortlink) {
       });
       return false;
     }
+
+// Copy Link
+var buttonCopy = document.querySelector("#copy-shortlink");
+var linkcopy = document.querySelector("#output-shortlink");
+if (buttonCopy) {
+   buttonCopy.addEventListener('click', () => {
+      linkcopy.select();
+      document.execCommand("copy");
+      linkcopy.setSelectionRange(0, 0);
+      notification(berhasil + "Link berhasil dicopy");
+   });
+}
   });
 }
 
