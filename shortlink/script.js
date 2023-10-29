@@ -91,6 +91,8 @@ if (buttonShortlink) {
       });
       return false;
     }
+  });
+}
 
 // Copy Link
 var buttonCopy = document.querySelector("#copy-shortlink");
@@ -102,7 +104,5 @@ if (buttonCopy) {
       linkcopy.setSelectionRange(0, 0);
       notification(berhasil + "Link berhasil dicopy");
    });
-}
-  });
 }
 
