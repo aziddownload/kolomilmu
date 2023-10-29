@@ -206,6 +206,32 @@ select {
     vertical-align: 12px;
     margin-left: 5px;
 }
+.formdata .box-prefix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 0;
+    font-size: 14px;
+    padding: 12px 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.formdata .box-prefix input {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
 .button-submit {
     position: relative;
     display: block;
