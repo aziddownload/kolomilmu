@@ -31,5 +31,43 @@
     <div class="content flex">
         <p>www.smam9sby.sch.id</p>
     </div>
+    <script>
+var apikeyFirebase = "AIzaSyA_daTguV7VFYrt8R1G0mO9JmdMt-cfnT4";
+var projectID = "shortlink-97ecc";
+var appID = "1:39513375310:web:83a1c8e1e4dff0fbcd391f";
+var splitappID = appID.split(":");
+var senderID = splitappID[1];
+
+//Url
+var url_string = window.location.href;
+var urlParameter = new URL(url_string);
+var urlHome = urlParameter.origin;
+var urlPathname = urlParameter.pathname;
+var id = urlPathname.replace("/", "");
+console.log(id);
+
+// Firebase Config
+const firebaseConfig = {
+    apiKey: apikeyFirebase,
+    authDomain: projectID+".firebaseapp.com",
+    projectId: projectID,
+    storageBucket: projectID+".appspot.com",
+    messagingSenderId: senderID,
+    appId: appID
+};
+firebase.initializeApp(firebaseConfig);
+let db = firebase.firestore(); 
+
+db.collection("datashortlink").where("id", "==", id).get().then((data) => {
+    var checkempty = data.empty;
+    if (checkempty == false) {
+        data.forEach(function (doc) {
+            var data = doc.data();
+            var url = data.url;
+            window.location.href = url;
+        });
+    }
+});
+    </script>
 </body>
 </html>
